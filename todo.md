@@ -46,10 +46,10 @@
 - [x] 保存 checkpoint 并交付
 
 ## GitHub 迁移与文档导出
-- [ ] 下载 6 张插画原图并加入项目 assets/illustrations 目录，推送到 GitHub
-- [ ] 代码中图片引用从 /manus-storage/ 改为 GitHub 链接
-- [ ] 导出原始生图提示词文档（docs/image-prompts.md）
-- [ ] 导出设计理念 ideas.md、设计规范 design.md（页面规范/风格/动效/字体/色彩）
-- [ ] 编写新贡献者 README（环境配置、项目结构、关键文件、开发流程）
-- [ ] 全部文档与配图通过 GitHub 推送完成
-- [ ] 将整个课件制作流程打包为可复用 skill 并交付
+- [x] 下载 6 张插画并加入项目 assets/illustrations 目录（原始 PNG 单张 4.7-6.7MB 过大，转为 ≤700KB 的优化 webp 版本入库以避免仓库臃肿与加载缓慢），推送到 GitHub
+- [x] 代码中图片引用从 /manus-storage/ 改为 GitHub 链接（仓库已设为 public，raw 链接全部 200，页面截图验证正常）
+- [x] 导出原始生图提示词文档（docs/image-prompts.md）
+- [x] 导出设计理念 ideas.md、设计规范 design.md（页面规范/风格/动效/字体/色彩）
+- [x] 编写新贡献者 README（环境配置、项目结构、关键文件、开发流程）
+- [x] 全部文档与配图通过 GitHub 推送完成（commit 9c191c9 已在 user_github/main）
+- [x] 将整个课件制作流程打包为可复用 skill 并交付（interactive-lesson-courseware，校验通过，含设计规范/插画提示词/互动模式/AI prompt 四份参考 + 三份模板）
