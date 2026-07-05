@@ -43,4 +43,13 @@
 - [x] vitest 覆盖 AI 接口
 - [x] 逐页截图检查视觉与动效
 - [x] 浏览器实测动效与交互：翻页雾散开、hashchange 同步（已修复）、跟读句子高亮、背诵挖空、颜色配对反馈、过冬 SVG 连线、生字 AI 解释、结构梳理答题、仿写 AI 点评、AI 问答接口真实返回
-- [ ] 保存 checkpoint 并交付
+- [x] 保存 checkpoint 并交付
+
+## GitHub 迁移与文档导出
+- [ ] 下载 6 张插画原图并加入项目 assets/illustrations 目录，推送到 GitHub
+- [ ] 代码中图片引用从 /manus-storage/ 改为 GitHub 链接
+- [ ] 导出原始生图提示词文档（docs/image-prompts.md）
+- [ ] 导出设计理念 ideas.md、设计规范 design.md（页面规范/风格/动效/字体/色彩）
+- [ ] 编写新贡献者 README（环境配置、项目结构、关键文件、开发流程）
+- [ ] 全部文档与配图通过 GitHub 推送完成
+- [ ] 将整个课件制作流程打包为可复用 skill 并交付
