@@ -1,3 +1,10 @@
+/*
+ * 《秋天的雨》交互课件
+ * 设计哲学：山水咨询主义 × 秋日插画平面风格
+ * - 底色：暖雾白 #FAFAF7；主墨：深松墨绿 #1A2E28；强调：柿橙（秋日限定强调色）
+ * - 字体：Noto Serif SC（衬线结论标题）/ Noto Sans SC（正文）/ Inter（数字标签）
+ * - 留白即结构；自然即隐喻；网格即纪律；一页一论点
+ */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -27,151 +34,358 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-ink: var(--ink);
+  --color-mist: var(--mist);
+  --color-stone: var(--stone);
+  --color-persimmon: var(--persimmon);
+  --color-ginkgo: var(--ginkgo);
+  --color-maple: var(--maple);
+  --font-serif-sc: "Noto Serif SC", serif;
+  --font-sans-sc: "Noto Sans SC", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --radius: 0.25rem;
+  /* 暖雾白底 */
+  --background: oklch(0.983 0.003 106);
+  /* 深松墨绿 */
+  --foreground: oklch(0.26 0.03 168);
+  --ink: oklch(0.26 0.03 168);
+  /* 雾青 */
+  --mist: oklch(0.72 0.03 178);
+  /* 浅石灰 */
+  --stone: oklch(0.92 0.006 96);
+  /* 柿橙：秋日强调色（本课唯一高饱和点缀） */
+  --persimmon: oklch(0.68 0.16 45);
+  /* 银杏黄 */
+  --ginkgo: oklch(0.83 0.14 90);
+  /* 枫叶红 */
+  --maple: oklch(0.58 0.19 30);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.26 0.03 168);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.26 0.03 168);
+  --primary: oklch(0.68 0.16 45);
+  --primary-foreground: oklch(0.985 0.003 106);
+  --secondary: oklch(0.94 0.008 168);
+  --secondary-foreground: oklch(0.3 0.03 168);
+  --muted: oklch(0.955 0.004 106);
+  --muted-foreground: oklch(0.52 0.02 168);
+  --accent: oklch(0.94 0.008 168);
+  --accent-foreground: oklch(0.26 0.03 168);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-}
-
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --border: oklch(0.9 0.008 130);
+  --input: oklch(0.9 0.008 130);
+  --ring: oklch(0.68 0.16 45);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: "Noto Sans SC", "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
+  a[href] {
     @apply cursor-pointer;
   }
 }
 
-@layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
-  }
+/* ---------- 字体系统 ---------- */
+.font-display {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+.font-serif-title {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+}
+.font-label {
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.font-num {
+  font-family: "Inter", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.font-body-light {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 300;
+}
+/* 课文正文（衬线、大行高，适合儿童阅读） */
+.font-lesson {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 600;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+}
 
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
+/* ---------- 演示切换动效 ---------- */
+:root {
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-soft: cubic-bezier(0.77, 0, 0.175, 1);
+}
 
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
-  }
+.slide-viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--background);
+}
 
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
+.slide-page {
+  position: absolute;
+  inset: 0;
+  will-change: opacity, transform, filter;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slide-enter {
+    animation: slideEnter 0.65s var(--ease-out-quint) both;
   }
+  .slide-exit {
+    animation: slideExit 0.5s var(--ease-in-out-soft) both;
+  }
+  .slide-enter-back {
+    animation: slideEnterBack 0.65s var(--ease-out-quint) both;
+  }
+  .slide-exit-back {
+    animation: slideExitBack 0.5s var(--ease-in-out-soft) both;
+  }
+}
+
+@keyframes slideEnter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.992);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+@keyframes slideExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-22px) scale(0.996);
+    filter: blur(5px);
+  }
+}
+@keyframes slideEnterBack {
+  from {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.992);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+@keyframes slideExitBack {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(22px) scale(0.996);
+    filter: blur(5px);
+  }
+}
+
+/* 元素错层入场 */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: revealUp 0.9s var(--ease-out-quint) both;
+    animation-delay: calc(var(--d, 0) * 1ms);
+  }
+}
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 张力页背景 Ken Burns（极缓） */
+@media (prefers-reduced-motion: no-preference) {
+  .kenburns {
+    animation: kenburns 18s var(--ease-in-out-soft) both;
+  }
+}
+@keyframes kenburns {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ---------- 等高线纹理（签名元素） ---------- */
+.contour-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cg fill='none' stroke='%231A2E28' stroke-opacity='0.045' stroke-width='1'%3E%3Cpath d='M0 720 Q 220 640 450 700 T 900 660'/%3E%3Cpath d='M0 770 Q 240 690 460 745 T 900 710'/%3E%3Cpath d='M0 820 Q 260 745 470 795 T 900 760'/%3E%3Cpath d='M0 870 Q 280 800 480 845 T 900 812'/%3E%3Cpath d='M120 60 Q 300 20 480 70 T 880 40'/%3E%3Cpath d='M150 115 Q 320 75 500 122 T 900 92'/%3E%3Cpath d='M190 170 Q 350 132 520 175 T 900 145'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 900px 900px;
+}
+
+/* 细分隔线 */
+.hairline {
+  height: 1px;
+  background: linear-gradient(to right, oklch(0.26 0.03 168 / 0.18), oklch(0.26 0.03 168 / 0.04));
+}
+
+/* 品牌粒子（柿橙小方点） */
+.brand-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--persimmon);
+  flex-shrink: 0;
+}
+
+/* 页面容器安全边距（16:9舞台内） */
+.stage-pad {
+  padding: clamp(2rem, 5vw, 5.5rem) clamp(2rem, 6vw, 7rem);
+}
+
+/* ---------- 秋雨氛围：飘落叶片与雨滴 ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .leaf-fall {
+    animation: leafFall var(--leaf-dur, 14s) linear infinite;
+    animation-delay: var(--leaf-delay, 0s);
+  }
+  .rain-drop {
+    animation: rainDrop var(--rain-dur, 2.8s) linear infinite;
+    animation-delay: var(--rain-delay, 0s);
+  }
+  .sway {
+    animation: sway 5.5s var(--ease-in-out-soft) infinite alternate;
+  }
+  .float-soft {
+    animation: floatSoft 6s var(--ease-in-out-soft) infinite alternate;
+    animation-delay: var(--f-delay, 0s);
+  }
+}
+@keyframes leafFall {
+  0% {
+    transform: translateY(-8vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: var(--leaf-opacity, 0.85);
+  }
+  50% {
+    transform: translateY(45vh) translateX(var(--leaf-drift, 4vw)) rotate(160deg);
+  }
+  92% {
+    opacity: var(--leaf-opacity, 0.85);
+  }
+  100% {
+    transform: translateY(105vh) translateX(calc(var(--leaf-drift, 4vw) * -0.6)) rotate(320deg);
+    opacity: 0;
+  }
+}
+@keyframes rainDrop {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--rain-opacity, 0.35);
+  }
+  88% {
+    opacity: var(--rain-opacity, 0.35);
+  }
+  100% {
+    transform: translateY(108vh);
+    opacity: 0;
+  }
+}
+@keyframes sway {
+  from {
+    transform: rotate(-2.5deg);
+  }
+  to {
+    transform: rotate(2.5deg);
+  }
+}
+@keyframes floatSoft {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* 配对成功脉冲 */
+@media (prefers-reduced-motion: no-preference) {
+  .match-pop {
+    animation: matchPop 0.55s var(--ease-out-quint) both;
+  }
+  .match-shake {
+    animation: matchShake 0.4s ease-in-out both;
+  }
+}
+@keyframes matchPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes matchShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* 跟读句子高亮 */
+.sentence-active {
+  background: linear-gradient(transparent 62%, oklch(0.83 0.14 90 / 0.5) 62%);
+  transition: background 0.4s var(--ease-out-quint);
+}
+
+/* 滚动条隐藏 */
+::-webkit-scrollbar {
+  display: none;
 }
